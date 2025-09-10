@@ -3,7 +3,7 @@ import * as natural from 'natural';
 import { TranslateDto } from './dto/translate.dto';
 import translate from 'google-translate-api-x';
 
-interface TranslateOutputInterface {
+export interface TranslateOutputInterface {
   input: string;
   tokens: string[];
   context: string;

@@ -1,3 +1,3 @@
-export class TranslateDto{
-    wordsToTranslate:string;
+export class TranslateDto {
+  wordsToTranslate: string;
 }
