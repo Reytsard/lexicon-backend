@@ -11,6 +11,7 @@ export interface TranslateOutputInterface {
   filipinoTranslation: string;
   googleTranslateEnglish: string;
   googleTranslateTagalog: string;
+  googleTranslateKapampangan: string;
 }
 
 @Injectable()
@@ -31,6 +32,7 @@ export class TranslateService {
       filipinoTranslation: '',
       googleTranslateEnglish: '',
       googleTranslateTagalog: '',
+      googleTranslateKapampangan: '',
     };
 
     // 🧹 Clean input
@@ -105,6 +107,9 @@ export class TranslateService {
     ).text;
     output.googleTranslateTagalog = (
       await translate(translateDto.wordsToTranslate, { to: 'tl' })
+    ).text;
+    output.googleTranslateKapampangan = (
+      await translate(translateDto.wordsToTranslate, { to: 'pam' })
     ).text;
 
     return output;
